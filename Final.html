@@ -11771,6 +11771,40 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Whether you have you are a new or old fan of Pokemon, you know that the Pokemon universe is constantly changing and expanding. So in order to better understand the Pokemon universe, we will be exploring Pokemon data from all seven Pokemon generations! That's 802 Pokemon plus their variations, such as mega ecolutions, Alolan versions, and primal forms! But don't let those numbers scare you away. This tutorial will show you how to format data, choose your starter Pokemon, analyze and graph type advantages of different Pokemon, find the strongest Pokemon, and better understand each Pokemon generation, so you can become the very best like no one ever was.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Formatting-and-Cleaning-Data">Formatting and Cleaning Data<a class="anchor-link" href="#Formatting-and-Cleaning-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before starting to manipulate data, you need to get your tools ready. Import the tools like below.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -11793,8 +11827,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Cleaning up our data and refomatting
-The data will be using has all of the Pokemon ID numbers, names, stats, generations, and legendary statuses. As you can see, some Pokemon have entries for mega evolutions as well, the first being on row three for Mega Venusaur. Mega evolutions are powered up versions of Pokemon, which is why they have different stats. They can only be used when in battle when it is holding its respective mega stone. Some even have more than one version, like with Mega Charizard X and Y.</p>
+<p>Make a new dataframe from the data and take a look at the entries. The data will be using has all of the Pokemon ID numbers, names, stats, generations, and legendary statuses. As you can see, some Pokemon have entries for mega evolutions as well, the first being on row three for Mega Venusaur. Mega evolutions are powered up versions of Pokemon, which is why they have different stats. They can only be used when in battle when it is holding its respective mega stone. Some even have more than one version, like with Mega Charizard X and Y.</p>
 
 </div>
 </div>
@@ -12019,7 +12052,7 @@ The data will be using has all of the Pokemon ID numbers, names, stats, generati
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To make the column labels easier to read, I will make them all upper case. Also, we will not be using Pokemon ID numbers and would like to use Pokemon names as indices, which makes more sense when reading through the list of Pokemon.</p>
+<p>To make the column labels easier to read, make them all upper case. Also, you will not be using Pokemon ID numbers and would like to use Pokemon names as indices, which makes more sense when reading through the list of Pokemon.</p>
 
 </div>
 </div>
@@ -12171,7 +12204,7 @@ The data will be using has all of the Pokemon ID numbers, names, stats, generati
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we will be cleaning up some of the names in the data set for mega Pokemon and other variations, such as Alolan and Primal forms.</p>
+<p>Now, clean up some of the names in the data set for mega Pokemon and other variations, such as Alolan and Primal forms.</p>
 
 </div>
 </div>
@@ -12321,7 +12354,7 @@ The data will be using has all of the Pokemon ID numbers, names, stats, generati
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pokemon and their stats can now be found using their name.</p>
+<p>Pokemon and their stats can now be found using their name. Here's an example. Try it for yourself with other Pokemon to quickly find their characteristics.</p>
 
 </div>
 </div>
@@ -12367,6 +12400,14 @@ Name: Alolan Raichu, dtype: object
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Picking-your-Starter-Pokemon-and-Traversing-Data">Picking your Starter Pokemon and Traversing Data<a class="anchor-link" href="#Picking-your-Starter-Pokemon-and-Traversing-Data">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12729,7 +12770,7 @@ Name: Alolan Raichu, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using the effectiveness function, the type effectiveness potential can be calculated based on all Pokemon in its deneration.</p>
+<p>Using the effectiveness function, the type effectiveness potential can be calculated based on all Pokemon in its deneration. You can make a simplified version that adds points per effectiveness of type without considering the second type. This will make it easier to calculate while also still giving you a good idea of a Pokemon's type effectiveness.</p>
 
 </div>
 </div>
@@ -12745,7 +12786,7 @@ Name: Alolan Raichu, dtype: object
     <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">Pokemon</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
         <span class="n">effect</span> <span class="o">=</span> <span class="n">effectiveness</span><span class="p">(</span><span class="n">type1</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TYPE 1&#39;</span><span class="p">])</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TYPE 2&#39;</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TYPE 2&#39;</span><span class="p">]):</span> <span class="c1">#checks for a secondary typing</span>
             <span class="n">effect</span> <span class="o">+=</span> <span class="n">effectiveness</span><span class="p">(</span><span class="n">type1</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TYPE 2&#39;</span><span class="p">])</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">type2</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
             <span class="n">effect</span> <span class="o">+=</span> <span class="n">effectiveness</span><span class="p">(</span><span class="n">type2</span><span class="p">,</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TYPE 1&#39;</span><span class="p">])</span>
@@ -13968,7 +14009,15 @@ gg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Moving on to the big picture. Choosing your starter Pokemon is very important in Pokemon, but there are still so many more Pokemon out there. In fact, there are 802 Pokemon now, not including different Alolan forms, mega evolutions, shiny Pokemon, and different genders. That's a lot of Pokemon! So in order to better understand the Pokemon world, you must have an understanding of each generation as a whole. First, count how many Pokemon are of each type using its primary typing(TYPE 1).</p>
+<h1 id="Exploring-the-Pokemon-World-and-More-Advanced-Plots">Exploring the Pokemon World and More Advanced Plots<a class="anchor-link" href="#Exploring-the-Pokemon-World-and-More-Advanced-Plots">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Move on to the big picture. Choosing your starter Pokemon is very important in Pokemon, but there are still so many more Pokemon out there. In fact, there are 802 Pokemon now, not including different Alolan forms, mega evolutions, shiny Pokemon, and different genders. That's a lot of Pokemon! So in order to better understand the Pokemon world, you must have an understanding of each generation as a whole. First, count how many Pokemon are of each type using its primary typing(TYPE 1).</p>
 
 </div>
 </div>
@@ -15923,6 +15972,14 @@ OQAAAAAAfvA/oLf9CqcfdO8AAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The violin plot shows that generation 3 has the strongest Pokemon. Another interesting thing to note is how top heavy the current generation's(7) Pokemon plot is very top heavy, indicating that most of its Pokemon are quite strong on average.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1>
 </div>
 </div>
 </div>
